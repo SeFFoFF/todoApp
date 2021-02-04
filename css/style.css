@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  color: black;
+  background-color: rgba(224, 224, 224, 0.493);
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.main {
+  width: 500px;
+  margin: 50px auto;
+  padding: 0 50px;
+}
+
+.main__todo-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-name {
+  font-size: 65px;
+  text-align: center;
+}
+
+.input-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 15px 0;
+}
+
+.todo-field {
+  font-size: 20px;
+
+  height: 50px;
+  padding: 0 30px;
+
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.todo-field:focus {
+  outline: none;
+}
+
+.todo-field::placeholder {
+  font-size: 20px;
+  font-style: italic;
+
+  opacity: 0.5;
+}
+
+.add-btn {
+  width: 25%;
+  height: 50px;
+
+  padding: 15px;
+
+  font-size: 18px;
+  text-align: center;
+
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #bbb;
+}
+
+ul li {
+  position: relative;
+  padding: 12px 8px 12px 40px;
+
+  font-size: 20px;
+
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+
+  list-style-type: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.473);
+}
+
+ul li.checked {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 16px;
+
+  height: 15px;
+  width: 7px;
+
+  border-color: green;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close-btn:hover {
+  background-color: #f44336;
+  color: white;
+
+  cursor: pointer;
+}
